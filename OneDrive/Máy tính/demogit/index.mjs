@@ -6,7 +6,7 @@ import random from "random";
 const path = "./data.json";
 
 const isValiDate = (date) => {
-    const startDate = moment("2019-01-01");
+    const startDate = moment("2023-01-01");
     const endDate = moment("2024-01-01");
     return date.isBetween(startDate, endDate, null, "[]");
 };
@@ -23,11 +23,11 @@ const markCommit = async (date) => {
 const makeCommits = async (n) => {
     const git = simpleGit();
 
-    for (let i = 0; i < 0; i++){
+    for (let i = 0; i < n; i++){
         const randomWeeks = random.int( 0, 54 * 4);
         const randomDays = random.int( 0, 6);
 
-        const randomDate = moment("2019-01-01")
+        const randomDate = moment("2023-01-01")
             .add(randomWeeks, "weeks")
             .add(randomDays, "days");
         
